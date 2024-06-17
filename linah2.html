@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Voice Note</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffe6f2;
+        }
+        .voice-note-container {
+            text-align: center;
+            background: #fff0f5;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border: 3px solid #ff66b2;
+        }
+        h1 {
+            color: #ff3399;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        audio {
+            width: 300px;
+            margin-top: 10px;
+        }
+        .show-more {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #ff66b2;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+        .show-more:hover {
+            background-color: #ff3399;
+        }
+    </style>
+</head>
+<body>
+    <div class="voice-note-container">
+        <h1>Happy Birthday!</h1>
+        <audio controls>
+            <source src="your-voice-note-file.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <br>
+        <div class="show-more" onclick="checkPassword()">Show More</div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = prompt("حاولي تحلي مشكلاتك في اشياء داينا بتحل كل المشاكل ...");
+            if (password === "بودي") {
+                window.location.href = "more.html";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
